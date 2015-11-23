@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0;
+}
+
+.ListHeader {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/*.ms-TextField .ms-TextField-field {
+  margin-top: 14px;
+}*/
+
+.ms-List-item {
+  height: 74px;
+}
+
+.ms-Button {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.TodoBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 2;
+  background-color: #0078D7; /* Use a better background-color */
+}
+
+.TodoList {
+  float: left;
+  margin-top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-height: 200px;
+  background-color: #FFF;
+}
