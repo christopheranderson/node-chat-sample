@@ -1,0 +1,20 @@
+{
+  "name": "node-chat-sample",
+  "description": "Sample of chat application built with Node",
+  "main": "bin/www",
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "metro": "~3.0.13",
+    "jquery": "~2.1.4"
+  }
+}
