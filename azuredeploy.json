@@ -66,6 +66,7 @@
         "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
       ],
       "properties": {
+        "name": "parameters('siteName')",
         "serverFarmId": "[parameters('appServicePlanName')]"
       },
       "resources": [
