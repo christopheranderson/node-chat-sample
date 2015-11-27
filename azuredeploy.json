@@ -59,14 +59,14 @@
     },
     {
       "apiVersion": "2015-06-01",
-      "name": "[variables('goSite')]",
+      "name": "parameters('siteName')",
       "type": "Microsoft.Web/sites",
       "location": "[parameters('siteLocation')]",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
       ],
       "properties": {
-        "name": "[variables('goSite')]",
+        "name": "parameters('siteName')",
         "serverFarmId": "[parameters('appServicePlanName')]"
       },
       "resources": [
@@ -75,7 +75,7 @@
           "name": "web",
           "type": "config",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', variables('goSite'))]"
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
           ],
           "properties": {
             "phpVersion": "off",
