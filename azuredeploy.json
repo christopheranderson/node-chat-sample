@@ -63,7 +63,7 @@
       "type": "Microsoft.Web/sites",
       "location": "[parameters('siteLocation')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
+        "[resourceId('Microsoft.Web/serverfarms/', parameters('appServicePlanName'))]"
       ],
       "properties": {
         "name": "parameters('siteName')",
@@ -75,7 +75,7 @@
           "name": "web",
           "type": "config",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/sites', parameters('siteName'))]"
+            "[resourceId('Microsoft.Web/sites/', parameters('siteName'))]"
           ],
           "properties": {
             "phpVersion": "off",
