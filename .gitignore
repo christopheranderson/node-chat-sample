@@ -31,3 +31,6 @@ npm-debug.log
 
 # Bower Modules
 bower_components
+
+# TSD Typings
+typings
