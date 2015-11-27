@@ -13,10 +13,10 @@
 <body>
   <nav class="app-bar" data-role="appbar">
     <div class="container">
-      <a class="app-bar-element branding" href="#"><span class="mif-home mif-2x"></span> Kontoso</a>
+      <a class="app-bar-element branding" href="/"><span class="mif-home mif-2x"></span> Kontoso</a>
       <span class="app-bar-divider"></span>
       <ul class="app-bar-menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">Get Started</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Support Portal</a></li>
@@ -24,6 +24,18 @@
       <a class="app-bar-element place-right" href="#">
         <span title="Provide Feedback" class="mif-heart fg-pink"><span>
       </a>
+      {{#if user}}
+        <ul class="app-bar-menu place-right">
+          <li>
+            <a class="dropdown-toggle " href="#">{{user.name}}</a>
+            <ul class="d-menu" data-role="dropdown">
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      {{else}}
+        <a class="app-bar-element place-right" href="/login">Login</a>
+      {{/if}}
     </div>
   </nav>
   {{{body}}}

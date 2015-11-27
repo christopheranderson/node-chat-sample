@@ -1,0 +1,20 @@
+<div class="container" style="height: 80%;">
+  <div class="grid condensed" id="chat-container" style="height: 80%; border: black solid 1px; overflow-y:scroll;">
+
+  </div>
+  <div>
+    <span id="chat-status">&nbsp</span>
+    <form action="#" id="chat-form">
+      <div class="input-control text full-size" data-role="input">
+        <input type="text" name="chat-message" id="chat-message">
+        <button class="button" id="chat-submit"><span class="mif-arrow-right"></span></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/chat.js"></script>
+<script type="text/javascript">
+  var chat = new Chat('http://localhost:3000/chat');
+</script>
