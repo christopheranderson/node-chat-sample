@@ -19,10 +19,20 @@ It's designed to be deployed to Azure Web Apps as a sample.
 2. `$> bower install`
 3. `$> npm start`
 
+There is also typing support for the client JS SDKs. You can install them with:
+
+ - `$> tsd install`
+
 
 ## Deploy
 
- > TBD
+Press this button below to deploy this sample into an Azure Web App.
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
+Optionally, you can deploy this sample yourself into an App you've already provisioned by cloning this repository and deploying via git yourself.
+
+You can customize deployment via the deploy.cmd file. I've customized this script to do bower installation after install.
 
 ## LICENSE
 
