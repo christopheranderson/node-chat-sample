@@ -51,7 +51,6 @@
       "type": "Microsoft.Web/serverfarms",
       "location": "[parameters('siteLocation')]",
       "properties": {
-        "name": "[parameters('appServicePlanName')]",
         "sku": "[parameters('sku')]",
         "workerSize": "[parameters('workerSize')]",
         "numberOfWorkers": 1
@@ -59,14 +58,13 @@
     },
     {
       "apiVersion": "2015-06-01",
-      "name": "parameters('siteName')",
+      "name": "[parameters('siteName')]",
       "type": "Microsoft.Web/sites",
       "location": "[parameters('siteLocation')]",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
       ],
       "properties": {
-        "name": "parameters('siteName')",
         "serverFarmId": "[parameters('appServicePlanName')]"
       },
       "resources": [
