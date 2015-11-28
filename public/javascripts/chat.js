@@ -1,3 +1,4 @@
+
 var Chat = function(host) {
   var chat = io(host);
   var previous = null;

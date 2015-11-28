@@ -16,5 +16,6 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="/javascripts/chat.js"></script>
 <script type="text/javascript">
-  var chat = new Chat('http://localhost:3000/chat');
+  var siteName = '{{#if siteName}}{{siteName}}{{else}}http://localhost:3000{{/if}}/chat'
+  var chat = new Chat(siteName);
 </script>

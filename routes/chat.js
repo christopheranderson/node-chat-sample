@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET chat page. */
 router.get('/', function(req, res, next) {
-  res.render('chat', {});
+  res.render('chat', {siteName: (process.env['siteName'] || null)});
 });
 
 module.exports = router;
