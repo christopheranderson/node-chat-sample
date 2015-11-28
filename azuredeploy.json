@@ -99,7 +99,6 @@
             "httpLoggingEnabled": true,
             "logsDirectorySizeLimit": 40,
             "detailedErrorLoggingEnabled": true,
-            "scmType": "LocalGit",
             "appSettings": [
               {
                 "Name": "SCM_SITEEXTENSIONS_FEED_URL",
