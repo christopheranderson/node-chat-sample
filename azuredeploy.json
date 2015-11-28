@@ -108,6 +108,10 @@
               {
                 "Name": "WEBSITE_NODE_DEFAULT_VERSION",
                 "Value": "4.2.1"
+              },
+              {
+                "Name": "siteName",
+                "Value": "[parameters('siteName')]"
               }
             ]
           }
