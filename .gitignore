@@ -34,3 +34,5 @@ bower_components
 
 # TSD Typings
 typings
+
+.DS_Store

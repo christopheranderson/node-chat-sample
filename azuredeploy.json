@@ -52,7 +52,6 @@
     },
     "branch": {
       "type": "string",
-      "defaultValue": "master",
       "metadata": {
         "description": "The branch of the GitHub repository to use."
       }
@@ -112,6 +111,14 @@
               {
                 "Name": "siteName",
                 "Value": "[parameters('siteName')]"
+              },
+              {
+                "Name":"PROJECT",
+                "Value":".\\src\\support-portal\\"
+              },
+              {
+                "Name":"COMMAND",
+                "Value":"deploy.cmd"
               }
             ]
           }
