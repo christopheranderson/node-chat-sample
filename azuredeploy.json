@@ -90,7 +90,6 @@
           ],
           "properties": {
             "WEBSITE_NODE_DEFAULT_VERSION":"4.2.1",
-            "siteName":"[concat('http://',parameters('siteName'),'.azurewebsites.net']",
             "PROJECT":"src\\support-portal\\",
             "COMMAND":"deploy.cmd"
           }
