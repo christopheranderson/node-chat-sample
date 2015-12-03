@@ -100,6 +100,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 call :SelectNodeVersion
 
 :: 3. Install npm packages
+echo Checking NPM install
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   echo Starting NPM install
   pushd "%DEPLOYMENT_TARGET%"
@@ -110,6 +111,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 )
 
 :: 4. Install bower packages
+echo Checking Bower install
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
   echo Starting Bower install
   pushd "%DEPLOYMENT_TARGET%"
@@ -118,6 +120,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
   popd
 )
 
+echo Deploy completed!
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :: Post deployment stub
