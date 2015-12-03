@@ -86,11 +86,11 @@
           "name": "appsettings",
           "type": "config",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', variables('siteName'))]",
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]",
           ],
           "properties": {
             "WEBSITE_NODE_DEFAULT_VERSION":"4.2.1",
-            "siteName":"[parameters('siteName')]",
+            "siteName":"[concat('http://',parameters('siteName'),'.azurewebsites.net']",
             "PROJECT":"src\\support-portal\\",
             "COMMAND":"deploy.cmd"
           }
