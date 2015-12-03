@@ -90,8 +90,7 @@
           ],
           "properties": {
             "WEBSITE_NODE_DEFAULT_VERSION":"4.2.1",
-            "PROJECT":"src\\support-portal\\",
-            "COMMAND":"deploy.cmd"
+            "PROJECT":"src\\support-portal"
           }
         },
         {
