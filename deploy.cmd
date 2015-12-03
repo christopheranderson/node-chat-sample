@@ -5,6 +5,8 @@
 :: Version: 0.1.11
 :: ----------------------
 
+echo Custom Deployment Script started (v0.0.1)
+
 :: Prerequisites
 :: -------------
 
@@ -99,6 +101,7 @@ call :SelectNodeVersion
 
 :: 3. Install npm packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
+  echo Starting NPM install
   pushd "%DEPLOYMENT_TARGET%"
   ::call :ExecuteCmd !NPM_CMD! install --production
   npm install --production
@@ -108,6 +111,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 
 :: 4. Install bower packages
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
+  echo Starting Bower install
   pushd "%DEPLOYMENT_TARGET%"
     bower install
     IF !ERRORLEVEL! NEQ 0 goto error
