@@ -111,7 +111,6 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   echo No errors; continuing...
   popd
 )
-
 :: 4. Install bower packages
 echo Checking Bower install
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
