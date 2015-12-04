@@ -98,14 +98,19 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 :: 2. Select node version
 call :SelectNodeVersion
- :: 3. Install bower packages
-echo Installing packages
+
+:: 3. Install npm packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
-    npm install --production
-    ls
-    bower install
-    echo Install complete
+  call :ExecuteCmd npm install --production
+  IF !ERRORLEVEL! NEQ 0 goto error
+  popd
+)
+
+:: 4. Install bower packages
+IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
+  pushd "%DEPLOYMENT_TARGET%"
+    call :ExecuteCmd bower install
     IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
