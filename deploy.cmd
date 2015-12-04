@@ -106,7 +106,9 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
   ::call :ExecuteCmd !NPM_CMD! install --production
   npm install --production
+  echo Finished NPM install
   IF !ERRORLEVEL! NEQ 0 goto error
+  echo No errors; continuing...
   popd
 )
 
