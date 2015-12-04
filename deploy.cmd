@@ -103,6 +103,7 @@ echo Installing packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
     npm install --production
+    ls
     bower install
     echo Install complete
     IF !ERRORLEVEL! NEQ 0 goto error
