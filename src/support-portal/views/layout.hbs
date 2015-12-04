@@ -17,9 +17,9 @@
       <span class="app-bar-divider"></span>
       <ul class="app-bar-menu">
         <li><a href="/">Home</a></li>
-        <li><a href="#">Get Started</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Support Portal</a></li>
+        <li><a href="/get-started">Get Started</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/portal">Support Portal</a></li>
       </ul>
       <a class="app-bar-element place-right" href="#">
         <span title="Provide Feedback" class="mif-heart fg-pink"><span>
@@ -27,7 +27,7 @@
       {{#if user}}
         <ul class="app-bar-menu place-right">
           <li>
-            <a class="dropdown-toggle " href="#">{{user.name}}</a>
+            <a class="dropdown-toggle " href="/feedback">{{user.name}}</a>
             <ul class="d-menu" data-role="dropdown">
               <li><a href="/logout">Logout</a></li>
             </ul>
@@ -48,7 +48,7 @@
       </div>
       <div class="row padding40 no-padding-left no-padding-right no-padding-top">
         <div class="cell size4 align-center">
-          <a href="#">Privacy Policy</a>
+          <a href="/about#privacy">Privacy Policy</a>
         </div>
         <div class="cell size4 align-center">
           <!-- THIS IS A DEMO PRODUCED BY MICROSOFT UNDER AN MIT LICENSE. -->
@@ -57,7 +57,7 @@
           Copyright Kontoso, Inc. 2015-2016
         </div>
         <div class="cell size4 align-center">
-          <a href="#">Contact Us</a>
+          <a href="/about#contact">Contact Us</a>
         </div>
       </div>
     </div>

@@ -15,9 +15,13 @@ var session = require("express-session")({
     ioSession = require("express-socket.io-session");
 // Express Routes
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var chat = require('./routes/chat');
 var user = require('./lib/user');
+var faq = require('./routes/faq');
+var getstarted = require('./routes/getstarted');
+var supportportal = require('./routes/supportportal');
+var about = require('./routes/about');
+var feedback = require('./routes/feedback');
 
 // IO Namespaces
 var chatIO = require('./lib/chat-io');
@@ -57,8 +61,12 @@ app.use('/login', user.login);
 // Authenticated
 app.use(user.requireAuth);
 app.use('/logout', user.logout);
-app.use('/users', users);
 app.use('/chat', chat);
+app.use('/faq',faq);
+app.use('/get-started',getstarted);
+app.use('/portal', supportportal);
+app.use('/about', about);
+app.use('/feedback', feedback);
 
 // IO Namespace init
 chatIO(io.of('/chat').use(ioSession(session)));
