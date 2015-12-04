@@ -87,7 +87,8 @@
       ],
       "properties": {
         "WEBSITE_NODE_DEFAULT_VERSION": "4.2.1",
-        "Project": "src\\support-portal"
+        "Project": "src\\support-portal",
+        "COMMAND": "deploy.cmd"
       }
     }, {
       "apiVersion": "2015-06-01",
